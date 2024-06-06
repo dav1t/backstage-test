@@ -5,13 +5,22 @@ kind: User
 metadata:
   name: dav1t
 spec:
-  memberOf: [guests]
+  memberOf: [control-plane]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: guests
+spec:
+  type: team
+  children: []
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: control-plane
 spec:
   type: team
   children: []
